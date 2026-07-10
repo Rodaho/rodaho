@@ -18,15 +18,15 @@
     <p class="eyebrow">Future homes</p>
     <h1>Kitten enquiry questionnaire</h1>
     <p class="lead">Thank you for considering a Rodaho kitten. This questionnaire is a preliminary step in our conversation and helps us understand whether a kitten would suit your home and lifestyle.</p>
-    <div class="notice"><p>There are no right or wrong answers. Please answer as fully and honestly as you can. Our kittens are raised as family members and we want to find them the very best homes.</p><p>Your answers are sent securely to Rodaho by FormSubmit, our form-delivery service. Please review the <a href="https://formsubmit.co/privacy.pdf">FormSubmit privacy policy</a> before submitting.</p></div>
-    <form action="https://formsubmit.co/dacw14@hotmail.com" method="POST">
-      <input type="hidden" name="_subject" value="New Rodaho kitten enquiry">
-      <input type="hidden" name="_next" value="https://rodaho.co.uk/thank-you.html">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_url" value="https://rodaho.co.uk/enquiry.html">
+    <div class="notice"><p>There are no right or wrong answers. Please answer as fully and honestly as you can. Our kittens are raised as family members and we want to find them the very best homes.</p><p>Your answers are sent to Rodaho through Web3Forms, our form-delivery provider. Please review <a href="https://docs.web3forms.com/getting-started/faq">Web3Forms privacy information</a> before submitting.</p></div>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="1d288334-b3d0-4b6f-ae7d-4b0dea33fd44">
+      <input type="hidden" name="subject" value="New Rodaho kitten enquiry">
+      <input type="hidden" name="redirect" value="https://rodaho.co.uk/thank-you.html">
+      <input class="honeypot" type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true">
       <fieldset>
         <legend>About you</legend>
-        <label for="name">Your name <span class="required">(required)</span></label><input id="name" name="Your name" autocomplete="name" required>
+        <label for="name">Your name <span class="required">(required)</span></label><input id="name" name="name" autocomplete="name" required>
         <label for="address">Address</label><textarea id="address" name="Address" autocomplete="street-address"></textarea>
         <label for="phone">Phone</label><input id="phone" name="Phone" type="tel" autocomplete="tel">
         <label for="email">Email <span class="required">(required)</span></label><input id="email" name="email" type="email" autocomplete="email" required>
@@ -56,7 +56,7 @@
         <legend>Commitments</legend>
         <label for="insurance">Will you insure your cat or cats? <span class="helper">Five weeks of free Agria insurance will be provided with each kitten.</span></label><textarea id="insurance" name="Insurance plans"></textarea>
         <label for="rehoming">Are you happy that, if circumstances change, you will contact us about your cat or kitten and allow us to rehome them if needed?</label><textarea id="rehoming" name="Agreement to contact breeder if circumstances change"></textarea>
-        <label for="additional">Please include anything else that you think may be relevant.</label><textarea id="additional" name="Additional information"></textarea>
+        <label for="additional">Please include anything else that you think may be relevant.</label><textarea id="additional" name="message"></textarea>
       </fieldset>
       <label class="consent" for="consent"><input id="consent" name="Consent to email" type="checkbox" required> I consent to my answers being emailed to Rodaho Tonkinese so that my enquiry can be considered. <span class="required">(required)</span></label>
       <button class="button" type="submit">Send enquiry</button>

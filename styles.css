@@ -111,6 +111,7 @@ legend { font-size: 1.25rem; font-weight: 800; }
 button { cursor: pointer; font: inherit; }
 .consent { display: flex; align-items: flex-start; gap: .65rem; padding: 1rem; border-radius: .3rem; background: var(--warm); }
 .consent input { width: 1.2rem; height: 1.2rem; flex: 0 0 auto; margin: .2rem 0 0; }
+.honeypot { display: none; }
 
 .site-footer { border-top: 1px solid var(--line); background: var(--surface); }
 .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 2rem; padding: 1.5rem 0; color: var(--muted); font-size: .92rem; }
