@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Complete the Rodaho Tonkinese kitten enquiry questionnaire to help us understand your home, experience, and the kitten you are looking for.">
+  <meta name="description" content="Complete the Rodaho Tonkinese Kitten Enquiries questionnaire to help us understand your home, experience, and the kitten you are looking for.">
   <meta name="author" content="Rodaho Tonkinese">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://rodaho.co.uk/enquiry.html">
-  <meta property="og:locale" content="en_GB"><meta property="og:type" content="website"><meta property="og:site_name" content="Rodaho Tonkinese"><meta property="og:title" content="Tonkinese Kitten Enquiry Questionnaire | Rodaho"><meta property="og:description" content="Tell us about your home and the Tonkinese kitten you are looking for."><meta property="og:url" content="https://rodaho.co.uk/enquiry.html"><meta name="twitter:card" content="summary">
-  <title>Tonkinese Kitten Enquiry Questionnaire | Rodaho</title>
+  <meta property="og:locale" content="en_GB"><meta property="og:type" content="website"><meta property="og:site_name" content="Rodaho Tonkinese"><meta property="og:title" content="Kitten Enquiries Questionnaire | Rodaho"><meta property="og:description" content="Tell us about your home and the Tonkinese kitten you are looking for."><meta property="og:url" content="https://rodaho.co.uk/enquiry.html"><meta name="twitter:card" content="summary">
+  <title>Kitten Enquiries Questionnaire | Rodaho Tonkinese</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-  <header class="site-header"><div class="bar"><a class="brand" href="index.html">RODAHO <span>TONKINESE</span></a><nav aria-label="Main navigation"><ul><li><a href="about-us.html">About us</a></li><li><a href="breeding-queens.html">Queens</a></li><li><a href="previous-kittens.html">Previous kittens</a></li><li><a href="kitten-introductions.html">Introductions</a></li><li><a href="colours-coats.html">Colours &amp; coats</a></li><li><a aria-current="page" href="enquiry.html">Enquiry</a></li><li><a href="contract.html">Contract</a></li></ul></nav></div></header>
+  <header class="site-header"><div class="bar"><a class="brand" href="index.html">RODAHO <span>TONKINESE</span></a><nav aria-label="Main navigation"><ul><li><a href="about-us.html">About us</a></li><li><a href="breeding-queens.html">Queens</a></li><li><a href="previous-kittens.html">Previous kittens</a></li><li><details class="nav-dropdown"><summary>Guidance</summary><ul><li><a href="kitten-introductions.html">Kitten Introduction Guidance</a></li><li><a href="colours-coats.html">Colours &amp; coats</a></li></ul></details></li><li><a aria-current="page" href="enquiry.html">Kitten Enquiries</a></li><li><a href="contract.html">Contract</a></li></ul></nav></div></header>
   <main id="main">
     <p class="eyebrow">Future homes</p>
-    <h1>Kitten enquiry questionnaire</h1>
+    <h1>Kitten enquiries questionnaire</h1>
     <p class="lead">Thank you for considering a Rodaho kitten. This questionnaire is a preliminary step in our conversation and helps us understand whether a kitten would suit your home and lifestyle.</p>
     <div class="notice"><p>There are no right or wrong answers. Please answer as fully and honestly as you can. Our kittens are raised as family members and we want to find them the very best homes.</p><p>Your answers are sent to Rodaho through Web3Forms, our form-delivery provider. Please review <a href="https://docs.web3forms.com/getting-started/faq">Web3Forms privacy information</a> before submitting.</p></div>
-    <form action="https://api.web3forms.com/submit" method="POST">
+    <form id="kitten-enquiry-form" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="1d288334-b3d0-4b6f-ae7d-4b0dea33fd44">
       <input type="hidden" name="subject" value="New Rodaho kitten enquiry">
       <input type="hidden" name="redirect" value="https://rodaho.co.uk/thank-you.html">
@@ -59,9 +59,20 @@
         <label for="additional">Please include anything else that you think may be relevant.</label><textarea id="additional" name="message"></textarea>
       </fieldset>
       <label class="consent" for="consent"><input id="consent" name="Consent to email" type="checkbox" required> I consent to my answers being emailed to Rodaho Tonkinese so that my enquiry can be considered. <span class="required">(required)</span></label>
+      <div class="captcha-wrap"><div class="h-captcha" data-captcha="true"></div></div>
       <button class="button" type="submit">Send enquiry</button>
     </form>
   </main>
   <footer class="site-footer"><div class="footer-inner"><span>Rodaho Tonkinese</span><span>Thank you for taking the time to complete this questionnaire.</span><span class="social-links"><a href="https://www.facebook.com/RodahoTonkinese/" rel="me noopener noreferrer" target="_blank">Facebook <span class="sr-only">(opens in a new tab)</span></a><a href="https://www.instagram.com/rodahotonkinese/" rel="me noopener noreferrer" target="_blank">Instagram <span class="sr-only">(opens in a new tab)</span></a></span></div></footer>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+  <script>
+    document.getElementById("kitten-enquiry-form").addEventListener("submit", function (event) {
+      const captcha = this.querySelector('textarea[name="h-captcha-response"]');
+      if (!captcha || !captcha.value) {
+        event.preventDefault();
+        window.alert("Please complete the hCaptcha check before sending your enquiry.");
+      }
+    });
+  </script>
 </body>
 </html>
