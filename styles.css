@@ -42,7 +42,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .site-header { background: var(--surface); border-bottom: 1px solid var(--line); }
 .bar, main, .footer-inner { width: min(100% - 2rem, 70rem); margin: auto; }
 .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 0; }
-.brand { display: inline-block; width: 5.75rem; height: 5.75rem; overflow: hidden; background: url("assets/rodaho-logo.png") center / contain no-repeat; text-indent: -9999px; white-space: nowrap; text-decoration: none; }
+.site-header .bar { width: calc(100% - 1rem); max-width: none; margin-left: .5rem; margin-right: .5rem; }
+.brand { display: inline-block; width: 11.5rem; height: 11.5rem; flex: 0 0 auto; overflow: hidden; background: url("assets/rodaho-logo.png") center / contain no-repeat; text-indent: -9999px; white-space: nowrap; text-decoration: none; }
 nav > ul { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .25rem .8rem; margin: 0; padding: 0; list-style: none; }
 nav a { display: inline-block; padding: .35rem .15rem; font-weight: 650; text-decoration-thickness: 1px; }
 nav a[aria-current="page"] { color: var(--accent); text-decoration-thickness: 3px; }
@@ -131,7 +132,8 @@ button { cursor: pointer; font: inherit; }
   nav > ul { justify-content: flex-start; margin-top: .6rem; }
   .nav-dropdown > ul { position: static; min-width: 0; margin-top: .25rem; box-shadow: none; }
   main { padding-top: 2rem; }
-  .brand { width: 4.75rem; height: 4.75rem; }
+  .site-header .bar { width: calc(100% - 1rem); margin-left: .5rem; margin-right: .5rem; }
+  .brand { width: 9.5rem; height: 9.5rem; }
   .term-grid, .coat-overview { grid-template-columns: 1fr; }
   .colour-pair { grid-template-columns: 3.2rem 1fr; }
 }
